@@ -110,7 +110,7 @@ _TYPE_PARSERS: Dict[Type[SqlType.Type], Callable[[PBValue, Any], Any]] = {
 }
 
 
-def _parse_pb_value_to_python_value(value: PBValue, metadata_type: SqlType.Type) -> Any:
+def _parse_pb_value_to_python_value(value: PBValue, metadata_type: SqlType.Type, column_info: dict[str, Any]) -> Any:
     """
     used for converting the value represented as a protobufs to a python object.
     """
